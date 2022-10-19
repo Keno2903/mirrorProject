@@ -1,8 +1,17 @@
 import React from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
+import axios from "axios";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 export default function Dashboard() {
+
+
+const getBackend = () => {
+    axios.get("http://localhost:8080/", { crossdomian: true})
+    .then((response) => {
+        console.log(response);
+    })
+}
   const layout = [
     { i: "a", x: 0, y: 0, w: 1, h: 1, isResizable: false },
     { i: "b", x: 1, y: 0, w: 1, h: 1, isResizable: false },
@@ -21,6 +30,7 @@ export default function Dashboard() {
       breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
       cols={{ lg: 3, md: 3, sm: 3, xs: 2, xxs: 1 }}
       rowHeight={300}
+      onLayoutChange={getBackend}
       width={1200}
     >
       <div key="a" style={{ background: "grey" }}>
