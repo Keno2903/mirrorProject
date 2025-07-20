@@ -1,5 +1,5 @@
 
-# 🪞 Smart Mirror – A Voice-Assisted Magic Mirror Built with React & Next.js
+# 🪞 Smart Mirror – Magic Mirror Built with React & Next.js
 
 This is a smart mirror project we developed in high school – a fully functional “magic mirror” display built using React, Next.js, and web-based APIs. It displays real-time information like time, weather, calendar events, and news on a minimalist mirrored interface.
 
